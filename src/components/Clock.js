@@ -15,6 +15,8 @@ class Clock extends React.Component {
         this.timerID = setInterval(
             () => this.tick(),
             1000);
+        console.log("Timer ID: ");
+        console.log(this.timerID);
     }
 
     componentWillUnmount() {
@@ -23,9 +25,10 @@ class Clock extends React.Component {
     }
 
     tick() {
+        console.log('Clock ticks')
         var randomColor = require('randomcolor'); // import the script
         var color = randomColor(); // a hex code 
-        this.setState({ date: new Date(), clockColor: {color: color} });
+        this.setState({ date: new Date(), clockColor: { color: color } });
     }
 
     render() {
