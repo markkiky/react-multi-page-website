@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+import   Clock  from "./Clock"
 
 function Navigation(props) {
   return (
@@ -10,6 +11,9 @@ function Navigation(props) {
             React Multi-Page Website
           </Link>
 
+          {/* Adding Clock Component to Navigation Bar */}
+          <Clock />
+          
           <div>
             <ul class="navbar-nav ml-auto">
               <li
@@ -40,6 +44,7 @@ function Navigation(props) {
                   Contact
                 </Link>
               </li>
+              
             </ul>
           </div>
         </div>
